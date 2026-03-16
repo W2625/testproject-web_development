@@ -1,0 +1,44 @@
+{% extends 'coffee_shop/layout.html'%}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'coffee_shop_css/index_style.css' %}">
+{% endblock %}
+{% block content%}
+    <header>
+        <div class="head-content">
+            <p>{{ header_p }}</p>
+            <h1>{{ header_h1 }}</h1>
+        </div>
+    </header>
+    <section id="section1">
+        <div class="section-text">
+            <h2><span class="main-color">{{ section1_h2_span }}</span>{{ section1_h2 }}</h2>
+            {% for p in section1_p %}
+                <p>{{ p }}</p>
+            {% endfor %}
+        </div>
+        <div class="section-img"></div>
+    </section>
+    <section id="section2">
+        <div class="section2-content">
+            <h2>{{ section2_h2 }}</h2>
+            <button>{{ section2_button }}</button>
+        </div>
+    </section>
+    <article id="article">
+        <div class="article-content">
+            <div class="article-title">
+                <h2>{{ article_h2 }}</h2>
+            </div>
+            <div class="article-detail">
+                {% for detail in article_detail%}
+                    <div>
+                        <p>{{ detail.text }}</p>
+                        <p>{{ detail.name }}</p>
+                        <p>{{ detail.rating }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </article>
+{% endblock  %}

@@ -1,0 +1,28 @@
+{% extends 'coffee_shop/layout.html' %}
+{% load static%}
+<!DOCTYPE html>
+{% block css %}
+    <link rel="stylesheet" href="{% static 'coffee_shop_css/contact_style.css' %}">
+{% endblock %}
+{% block content %}
+    <section id="section">
+        <div class="section-address">
+            {% for info in address_info %}
+                <div class="address-info">
+                    <p><strong>📍 Address:</strong>{{ info.address }}</p>
+                    <p><strong>📞 Утас:</strong>{{ info.phone }}</p>
+                    <p><strong>💌 email:</strong>{{ info.email }}</p>
+                </div>
+            {% endfor%}
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <form>
+                    <input type="text" placeholder="Enter your Name">
+                    <input type="text" placeholder="Enter a valid email address">
+                    <textarea rows="3" placeholder="Enter your suggestion..."></textarea>
+                    <button type="submit">Sumbit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.roboto-slab-body {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li:hover {
+    background-color: #ac7e68;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h3 span i {
+    padding-right: 10px;
+}
+
+.main-color {
+    color: #ac7e68;
+}
+
+#section1 {
+  display: grid;
+  grid-template-columns: auto 1fr;  /* 左列宽度固定，右列自适应 */
+  align-items: center;               /* 整体垂直居中 */
+  gap: 8rem;                        /* 两列间距 */
+  background: #fffbf2;
+  height: 60vh;
+  padding: 2rem;
+  padding-left: 8rem;
+  color: #3c2f2f;
+}
+
+.section-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;          /* 容器圆形 */
+  background: white;           /* 白色“边框”效果 */
+  padding: 12px;              /* 边框厚度 */
+  box-sizing: border-box;
+  overflow: hidden;
+  display: grid;               /* 用 grid 方便图片居中 */
+  justify-content: center;
+  align-items: center;
+}
+
+.section-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;          /* 图片圆形 */
+  object-fit: cover;
+  display: block;
+}
+
+.section-contents {
+  display: grid;
+  gap: 5rem;                /* 竖直间距 */
+}
+
+ .contents .content-num {
+  font-weight: 600;
+  color: #ac7e68;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.contents h3 {
+  margin-bottom: 1.5rem;
+}
+
+.contents p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a403a;
+}
+
+#section2 {
+    background: url("../coffee_shop_images/home3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2-content {
+    display: grid;
+    text-align: center;
+    gap: 1rem;
+}
+
+.section2-content h2{
+    color: #ac7e68;
+    font-weight: 450;
+    font-size: 2rem;
+}
+
+.section2-content h1{
+    color: #fff;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.section2-content p{
+    width: 90%;
+    color: #fff;
+}
+
+#footer {
+    background-color: #222;
+    height: 10vh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    /* ======== NAV ======== */
+     nav {
+        flex-direction: column;   /* 改成上下排列 */
+        align-items: center;      /* 居中 */
+        padding: 1rem 0.5rem;
+    }
+
+    nav h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;      /* 菜单横排 */
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 8px;
+        padding: 5px 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    /* ========= Section1 ========= */
+    #section1 {
+        grid-template-columns: 1fr;   /* 单列布局 */
+        height: auto;                 /* 取消固定高度 */
+        gap: 3rem;
+        padding: 3rem 1.5rem;         /* 去掉8rem */
+    }
+
+    .section-img {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;               /* 居中 */
+    }
+
+    .section-contents {
+        gap: 3rem;
+    }
+
+    .contents h3 {
+        font-size: 1.2rem;
+    }
+
+    .contents p {
+        font-size: 0.9rem;
+    }
+
+    /* ========= Section2 ========= */
+    #section2 {
+        height: 60vh;
+        padding: 2rem 1rem;
+    }
+
+    .section2-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .section2-content h1 {
+        font-size: 2rem;
+    }
+
+    .section2-content p {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    /* ========= Footer ========= */
+    #footer {
+        height: 8vh;
+    }
+}

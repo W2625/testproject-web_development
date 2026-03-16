@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="roboto-slab-body">
+    <nav>
+        <h3><span class="main-color"><i class="fa-solid fa-mug-hot"></i></span>Coffee <span class="main-color">Shop</span></h3>
+        <ul>
+            <li><a href="{% url 'coffee_shop:index' %}">Home</a></li>
+            <li><a href="{% url 'coffee_shop:menu' %}">Menu</a></li>
+            <li><a href="{% url 'coffee_shop:about' %}">About Us</a></li>
+            <li><a href="{% url 'coffee_shop:contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer id="footer">
+        <div class="footer-content">
+            <p>© Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </footer>
+</body>
+</html>

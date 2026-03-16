@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.roboto-slab-body {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li:hover {
+    background-color: #ac7e68;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h3 span i {
+    padding-right: 10px;
+}
+
+.main-color {
+    color: #ac7e68;
+}
+
+#section {
+    /* background: #fffbf2; */
+    background: url("../coffee_shop_images/back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 50px;
+}
+
+.section-address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.address-info {
+    font-size: 2.2rem;
+    line-height: 3.5;
+    color: #5c4432;
+    padding-top: 60px;
+}
+
+.address-info p strong {
+    margin-right: 8px;
+    color: #ac7e68;
+}
+
+.contact h3 {
+    font-size: 2rem;
+    color: #ac7e68;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* 表单内部间距更大 */
+}
+
+/* 输入框通用样式 */
+.contact form input,
+.contact form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 12px 0;
+    background-color: #ac7e68;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #8c5f4b;
+}
+
+
+#footer {
+    background-color: #222;
+    height: 10vh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    /* ======== NAV ======== */
+     nav {
+        flex-direction: column;   /* 改成上下排列 */
+        align-items: center;      /* 居中 */
+        padding: 1rem 0.5rem;
+    }
+
+    nav h3 {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;      /* 菜单横排 */
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 8px;
+        padding: 5px 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    /* ========= Contact Section ========= */
+
+    #section {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .section-address {
+        grid-template-columns: 1fr;   /* 改成单列 */
+        gap: 50px;
+    }
+
+    .address-info {
+        font-size: 1.2rem;            /* 缩小字体 */
+        line-height: 3;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .contact h3 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .contact form {
+        gap: 37px;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact form button {
+        font-size: 1rem;
+    }
+
+    /* ========= Footer ========= */
+    #footer {
+        height: 8vh;
+    }
+}

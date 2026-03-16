@@ -1,0 +1,30 @@
+{% extends 'coffee_shop/layout.html' %}
+{% load static%}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'coffee_shop_css/about_style.css' %}">
+{% endblock %}
+{% block content %}
+    <section id="section1">
+        <div class="section-img">
+            <img src="{% static 'coffee_shop_images/port-1.jpg' %}" alt="">
+        </div>
+        <div class="section-contents">
+            {% for content in section_contents %}
+                <div class="contents">
+                    <p class="content-num">{{ content.num }}</p>
+                    <h3>{{ content.title }}</h3>
+                    <p>{{ content.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section id="section2">
+        {% for content in section2_content %}
+            <div class="section2-content">
+                <h2>{{ content.h2 }}</h2>
+                <h1>{{ content.h1 }}</h1>
+                <p>{{ content.p }}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
